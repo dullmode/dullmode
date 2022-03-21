@@ -1,5 +1,6 @@
+### about me
+
 representative of Lootcard, japanese, vimmer.
-[![Top used Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=dullmode&layout=compact&theme=tokyonight)](https://github.com/dullmode/)
 
 <!--
 **dullmode/dullmode** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
