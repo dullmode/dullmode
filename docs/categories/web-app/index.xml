@@ -2,20 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>web app on dullmode</title>
-    <link>https://github.com/dullmode.io/categories/web-app/</link>
+    <link>https://dullmode.github.io/categories/web-app/</link>
     <description>Recent content in web app on dullmode</description>
     <image>
       <url>https://imgur.com/a/SR2UQt7</url>
       <link>https://imgur.com/a/SR2UQt7</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 21 Mar 2022 17:50:38 +0900</lastBuildDate><atom:link href="https://github.com/dullmode.io/categories/web-app/index.xml" rel="self" type="application/rss+xml" />
+    <language>ja-jp</language>
+    <lastBuildDate>Mon, 21 Mar 2022 17:50:38 +0900</lastBuildDate><atom:link href="https://dullmode.github.io/categories/web-app/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>リモートサーバー内でのdocker-composeエラー</title>
-      <link>https://github.com/dullmode.io/posts/2022-03-21/</link>
+      <link>https://dullmode.github.io/posts/2022-03-21/</link>
       <pubDate>Mon, 21 Mar 2022 17:50:38 +0900</pubDate>
       
-      <guid>https://github.com/dullmode.io/posts/2022-03-21/</guid>
+      <guid>https://dullmode.github.io/posts/2022-03-21/</guid>
       <description>最近はdocker-composeの使い過ぎでdockerのコマンドを忘れてきました。今回はこちらの記事を参考にdocker-composeでリモートサーバーにデプロイしようとした時に発生したエラーの備忘録です。
 永遠にpassphrase/password を求められる docker -c [context_name] [command]を使用したときに出現しました。
 以下のコマンドを打つとエラーが消えます。

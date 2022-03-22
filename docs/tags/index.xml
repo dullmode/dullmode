@@ -2,38 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on dullmode</title>
-    <link>https://github.com/dullmode.io/tags/</link>
+    <link>https://dullmode.github.io/tags/</link>
     <description>Recent content in Tags on dullmode</description>
     <image>
       <url>https://imgur.com/a/SR2UQt7</url>
       <link>https://imgur.com/a/SR2UQt7</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 21 Mar 2022 17:50:38 +0900</lastBuildDate><atom:link href="https://github.com/dullmode.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>ja-jp</language>
+    <lastBuildDate>Mon, 21 Mar 2022 17:50:38 +0900</lastBuildDate><atom:link href="https://dullmode.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>docker</title>
-      <link>https://github.com/dullmode.io/tags/docker/</link>
+      <link>https://dullmode.github.io/tags/docker/</link>
       <pubDate>Mon, 21 Mar 2022 17:50:38 +0900</pubDate>
       
-      <guid>https://github.com/dullmode.io/tags/docker/</guid>
+      <guid>https://dullmode.github.io/tags/docker/</guid>
       <description></description>
     </item>
     
     <item>
       <title>docker-compose</title>
-      <link>https://github.com/dullmode.io/tags/docker-compose/</link>
+      <link>https://dullmode.github.io/tags/docker-compose/</link>
       <pubDate>Mon, 21 Mar 2022 17:50:38 +0900</pubDate>
       
-      <guid>https://github.com/dullmode.io/tags/docker-compose/</guid>
+      <guid>https://dullmode.github.io/tags/docker-compose/</guid>
       <description></description>
     </item>
     
     <item>
       <title>linux</title>
-      <link>https://github.com/dullmode.io/tags/linux/</link>
+      <link>https://dullmode.github.io/tags/linux/</link>
       <pubDate>Mon, 21 Mar 2022 17:50:38 +0900</pubDate>
       
-      <guid>https://github.com/dullmode.io/tags/linux/</guid>
+      <guid>https://dullmode.github.io/tags/linux/</guid>
       <description></description>
     </item>
     
