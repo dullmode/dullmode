@@ -1,4 +1,4 @@
-baseURL: "https://dullmode.github.io/"
+baseURL: "https://dullmode.github.io"
 languageCode: 'ja-jp'
 title: dullmode
 paginate: 5
@@ -79,8 +79,7 @@ params:
     - name: stackoverflow
       url: "https://stackoverflow.com/users/14800276/dullmode" 
     - name: github
-      url: "https://github.com/dullmode"
-
+      url: "https://dullmode.github.io"
   analytics:
     google:
       SiteVerificationTag: "XYZabc"
@@ -95,7 +94,7 @@ params:
     hiddenInSingle: true # hide on single page
 
   editPost:
-    URL: "https://github.com/<path_to_repo>/content"
+    URL: "https://dullmode.github.io/content"
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
 
