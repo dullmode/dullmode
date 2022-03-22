@@ -1,7 +1,10 @@
-baseURL: "https://github.com/dullmode.io"
+baseURL: "https://github.com/dullmode.io/"
 title: dullmode
 paginate: 5
 theme: PaperMod
+
+publishDir: "docs"
+canonifyurls: true
 
 enableRobotsTXT: true
 buildDrafts: false
