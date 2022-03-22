@@ -63,6 +63,8 @@ params:
     imageHeight: 120
     imageTitle: my image
     buttons:
+      - name: Archive
+        url: archives/
       - name: Posts
         url: posts
       - name: Tags
