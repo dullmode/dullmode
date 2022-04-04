@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>docker_compose on dullmode</title>
+    <link>https://dullmode.github.io/tags/docker_compose/</link>
+    <description>Recent content in docker_compose on dullmode</description>
+    <image>
+      <url>https://imgur.com/a/SR2UQt7</url>
+      <link>https://imgur.com/a/SR2UQt7</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Mon, 21 Mar 2022 17:50:38 +0900</lastBuildDate><atom:link href="https://dullmode.github.io/tags/docker_compose/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>リモートサーバー内でのdocker-composeエラー</title>
+      <link>https://dullmode.github.io/posts/2022-03-21/</link>
+      <pubDate>Mon, 21 Mar 2022 17:50:38 +0900</pubDate>
+      
+      <guid>https://dullmode.github.io/posts/2022-03-21/</guid>
+      <description>最近はdocker-composeの使い過ぎでdockerのコマンドを忘れてきました。今回はこちらの記事を参考にdocker-composeでリモートサーバーにデプロイしようとした時に発生したエラーの備忘録です。
+永遠にpassphrase/password を求められる docker -c [context_name] [command]を使用したときに出現しました。以下のコマンドを打つとエラーが消えます。
+eval $(ssh-agent -s) &amp;amp;&amp;amp; ssh-add 人によってはeval $(ssh-agent -s)が無くても大丈夫かも。僕はssh-addだけだとエラー出ました。
+broken pipe error / 255 version mismatch error ssh先に、docker-compose -c [リモートサーバーのcontext] upと入力したら出現しました。
+解決策はCOMPOSE_DOCKER_CLI_BUILD=0をコマンドの先頭に入力することみたいです。 先程の例では、このように入力することが正解だったみたいです。
+COMPOSE_DOCKER_CLI_BUILD=0 docker-compose -c [リモートサーバーのcontext] up 参考  docker-connect-to-remote-daemon-via-ssh-permission-denied-publickey | stackoverflow docker-compose #8218 | github  </description>
+    </item>
+    
+  </channel>
+</rss>

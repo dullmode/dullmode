@@ -10,7 +10,23 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Tue, 22 Mar 2022 14:55:31 +0900</lastBuildDate><atom:link href="https://dullmode.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Mar 2022 13:53:49 +0900</lastBuildDate><atom:link href="https://dullmode.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vue.jsに動的OGP画像を実装する方法3選</title>
+      <link>https://dullmode.github.io/posts/2020-03-24/</link>
+      <pubDate>Thu, 24 Mar 2022 13:53:49 +0900</pubDate>
+      
+      <guid>https://dullmode.github.io/posts/2020-03-24/</guid>
+      <description>OGP画像の重要性 ogp画像はシェアされた際に、シェアした人のタイムラインにページタイトル・URL・概要・画像を表示させる仕組みのことを指します。OGPを正しく設定することで訴求力が高まり、SNSからの訪問者を増やすことに繋がります。
+しかしながらTwitterのクローラーはjavascriptを実行しない為、Vueを用いたSPAではindex.htmlに設定されたOGP画像のみ返す事ができます。つまりurl毎にOGP画像を変えたり、文章や画像を生成することはVue単体では不可能です。
+1. Server Side Rendering サーバーサイドレンダリング(SSR)はその名の通りサーバー側でアプリケーションの HTMLを生成し、レスポンスとして返すことを言います。SPAは表示したいものがあれば、都度APIから取得してくるのに対してSSRは初回のみAPI通信が不要なHTMLを返すのです。初月のみ無料、初月以降月額料金になるサブスクみたいな感じですかね。
+URLによってJavascriptを使わずにHTMLファイルを変えられるので、動的にOGPも編集できます
+ Pros: ページの読み込み高速化、SEOにも良い Cons: SPAを作り直す必要がある、技術取得コストが高い  要件定義の段階のプロジェクトにはSSRは有力な候補になります。既存のSPAアプリをSSRに変更するにはとても時間がかかりそうです。
+2. Dynamic Rendering ダイナミック レンダリングとは、特定のユーザーエージェントを対象に、クライアント側でレンダリングされるコンテンツとプリレンダリングされるコンテンツを切り替えることを指します。人によって態度を変える上司みたいな感じだと考えれば想像に難くないですね。Twitter Botなど特定のクライアントの時のみOGP画像が設定されたHTMLファイルを返すことでURLごとに違うOGPを返す事ができます。
+ Pros: 導入がSSRより簡単、SEOにも良い Cons: 画像や文章の生成が動的にできない  3. バックエンド側がOGPを返す フロントエンドURLへのリダイレクトとOGPがセットされたHTMLファイルを返すエンドポイントをバックエンドで実装します。Twitter クローラーはjavascriptを実行しないのでOGPのみ表示するのに対し、エンドポイントにアクセスしたユーザーはフロントエンドにリダイレクトされます。
+&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;ja&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;utf-8&amp;#34;&amp;gt; &amp;lt;meta property=&amp;#34;og:title&amp;#34; content=&amp;#34;タイトル&amp;#34;&amp;gt; &amp;lt;meta property=&amp;#34;og:image&amp;#34; content=&amp;#34;画像&amp;#34;&amp;gt; &amp;lt;meta property=&amp;#34;og:description&amp;#34; content=&amp;#34;サイトの説明&amp;#34;&amp;gt; &amp;lt;meta property=&amp;#34;og:url&amp;#34; content=&amp;#34;サイトのURL&amp;#34;&amp;gt; &amp;lt;meta property=&amp;#34;og:type&amp;#34; content=&amp;#34;website&amp;#34;&amp;gt; &amp;lt;meta property=&amp;#34;og:site_name&amp;#34; content=&amp;#34;サイトの名前&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;twitter:site&amp;#34; content=&amp;#34;@tos&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;twitter:card&amp;#34; content=&amp;#34;summary&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;twitter:title&amp;#34; content=&amp;#34;タイトル&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;twitter:image&amp;#34; content=&amp;#34;画像&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;twitter:description&amp;#34; content=&amp;#34;説明&amp;#34;&amp;gt; &amp;lt;script&amp;gt; window.</description>
+    </item>
+    
     <item>
       <title>fastapi&#43;uvicornでInvalid HTTP request received</title>
       <link>https://dullmode.github.io/posts/2022-03-22/</link>

@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>web app on dullmode</title>
-    <link>https://dullmode.github.io/categories/web-app/</link>
-    <description>Recent content in web app on dullmode</description>
+    <title>vue on dullmode</title>
+    <link>https://dullmode.github.io/tags/vue/</link>
+    <description>Recent content in vue on dullmode</description>
     <image>
       <url>https://imgur.com/a/SR2UQt7</url>
       <link>https://imgur.com/a/SR2UQt7</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Thu, 24 Mar 2022 13:53:49 +0900</lastBuildDate><atom:link href="https://dullmode.github.io/categories/web-app/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Mar 2022 13:53:49 +0900</lastBuildDate><atom:link href="https://dullmode.github.io/tags/vue/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Vue.jsに動的OGP画像を実装する方法3選</title>
       <link>https://dullmode.github.io/posts/2020-03-24/</link>
@@ -25,30 +25,6 @@ URLによってJavascriptを使わずにHTMLファイルを変えられるので
 2. Dynamic Rendering ダイナミック レンダリングとは、特定のユーザーエージェントを対象に、クライアント側でレンダリングされるコンテンツとプリレンダリングされるコンテンツを切り替えることを指します。人によって態度を変える上司みたいな感じだと考えれば想像に難くないですね。Twitter Botなど特定のクライアントの時のみOGP画像が設定されたHTMLファイルを返すことでURLごとに違うOGPを返す事ができます。
  Pros: 導入がSSRより簡単、SEOにも良い Cons: 画像や文章の生成が動的にできない  3. バックエンド側がOGPを返す フロントエンドURLへのリダイレクトとOGPがセットされたHTMLファイルを返すエンドポイントをバックエンドで実装します。Twitter クローラーはjavascriptを実行しないのでOGPのみ表示するのに対し、エンドポイントにアクセスしたユーザーはフロントエンドにリダイレクトされます。
 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;ja&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;utf-8&amp;#34;&amp;gt; &amp;lt;meta property=&amp;#34;og:title&amp;#34; content=&amp;#34;タイトル&amp;#34;&amp;gt; &amp;lt;meta property=&amp;#34;og:image&amp;#34; content=&amp;#34;画像&amp;#34;&amp;gt; &amp;lt;meta property=&amp;#34;og:description&amp;#34; content=&amp;#34;サイトの説明&amp;#34;&amp;gt; &amp;lt;meta property=&amp;#34;og:url&amp;#34; content=&amp;#34;サイトのURL&amp;#34;&amp;gt; &amp;lt;meta property=&amp;#34;og:type&amp;#34; content=&amp;#34;website&amp;#34;&amp;gt; &amp;lt;meta property=&amp;#34;og:site_name&amp;#34; content=&amp;#34;サイトの名前&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;twitter:site&amp;#34; content=&amp;#34;@tos&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;twitter:card&amp;#34; content=&amp;#34;summary&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;twitter:title&amp;#34; content=&amp;#34;タイトル&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;twitter:image&amp;#34; content=&amp;#34;画像&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;twitter:description&amp;#34; content=&amp;#34;説明&amp;#34;&amp;gt; &amp;lt;script&amp;gt; window.</description>
-    </item>
-    
-    <item>
-      <title>fastapi&#43;uvicornでInvalid HTTP request received</title>
-      <link>https://dullmode.github.io/posts/2022-03-22/</link>
-      <pubDate>Tue, 22 Mar 2022 14:55:31 +0900</pubDate>
-      
-      <guid>https://dullmode.github.io/posts/2022-03-22/</guid>
-      <description>invalid HTTP request received 本番環境でfastapiを動かしている時に以下のエラーが出力されました。
-INFO: Started server process [9806] INFO: Waiting for application startup. INFO: Application startup complete. INFO: Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit) WARNING: Invalid HTTP request received. Traceback (most recent call last): File &amp;#34;/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/protocols/http/h11_impl.py&amp;#34;, line 170, in handle_events event = self.conn.next_event() File &amp;#34;/home/ec2-user/.local/lib/python3.7/site-packages/h11/_connection.py&amp;#34;, line 443, in next_event exc._reraise_as_remote_protocol_error() File &amp;#34;/home/ec2-user/.local/lib/python3.7/site-packages/h11/_util.py&amp;#34;, line 76, in _reraise_as_remote_protocol_error raise self File &amp;#34;/home/ec2-user/.local/lib/python3.7/site-packages/h11/_connection.py&amp;#34;, line 425, in next_event event = self.</description>
-    </item>
-    
-    <item>
-      <title>リモートサーバー内でのdocker-composeエラー</title>
-      <link>https://dullmode.github.io/posts/2022-03-21/</link>
-      <pubDate>Mon, 21 Mar 2022 17:50:38 +0900</pubDate>
-      
-      <guid>https://dullmode.github.io/posts/2022-03-21/</guid>
-      <description>最近はdocker-composeの使い過ぎでdockerのコマンドを忘れてきました。今回はこちらの記事を参考にdocker-composeでリモートサーバーにデプロイしようとした時に発生したエラーの備忘録です。
-永遠にpassphrase/password を求められる docker -c [context_name] [command]を使用したときに出現しました。以下のコマンドを打つとエラーが消えます。
-eval $(ssh-agent -s) &amp;amp;&amp;amp; ssh-add 人によってはeval $(ssh-agent -s)が無くても大丈夫かも。僕はssh-addだけだとエラー出ました。
-broken pipe error / 255 version mismatch error ssh先に、docker-compose -c [リモートサーバーのcontext] upと入力したら出現しました。
-解決策はCOMPOSE_DOCKER_CLI_BUILD=0をコマンドの先頭に入力することみたいです。 先程の例では、このように入力することが正解だったみたいです。
-COMPOSE_DOCKER_CLI_BUILD=0 docker-compose -c [リモートサーバーのcontext] up 参考  docker-connect-to-remote-daemon-via-ssh-permission-denied-publickey | stackoverflow docker-compose #8218 | github  </description>
     </item>
     
   </channel>
