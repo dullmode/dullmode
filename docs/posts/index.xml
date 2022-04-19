@@ -10,7 +10,18 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Thu, 24 Mar 2022 13:53:49 +0900</lastBuildDate><atom:link href="https://dullmode.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 15 Apr 2022 16:51:35 +0900</lastBuildDate><atom:link href="https://dullmode.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>jinja2.exceptions.TemplateNotFoundの解決</title>
+      <link>https://dullmode.github.io/posts/2022-04-15/</link>
+      <pubDate>Fri, 15 Apr 2022 16:51:35 +0900</pubDate>
+      
+      <guid>https://dullmode.github.io/posts/2022-04-15/</guid>
+      <description>大丈夫なパターン htmlファイルのあるフォルダと関数Jinja2Templatesを呼び出すpythonファイルが同一階層の場合は出現しません。
+testapp ├ app.py └ templates └ index.html from fastapi import FastAPI from fastapi.templating import Jinja2Templates from fastapi.responses import HTMLResponse from fastapi.requests import Request app = FastAPI() templates = Jinja2Templates(directory=&amp;#39;templates&amp;#39;) @app.get(&amp;#34;/&amp;#34;, response_class=HTMLResponse) def index(request:Request): return templates.TemplateResponse( &amp;#34;index.html&amp;#34;, {&amp;#34;request&amp;#34;: request) ) エラーが出るパターン htmlファイルのあるフォルダと関数Jinja2Templatesを呼び出すpythonファイルが同一階層に無い場合にエラーが出現します。
+testapp ├ router │ └ route.py ├ templates │ └ index.html └ main.py from fastapi import FastAPI from .router import route app = FastAPI() app.include_router(route.router) from fastapi import APIRouter from fastapi.</description>
+    </item>
+    
     <item>
       <title>Vue.jsに動的OGP画像を実装する方法3選</title>
       <link>https://dullmode.github.io/posts/2020-03-24/</link>
