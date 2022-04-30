@@ -10,7 +10,21 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Fri, 15 Apr 2022 16:51:35 +0900</lastBuildDate><atom:link href="https://dullmode.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 30 Apr 2022 20:02:38 +0900</lastBuildDate><atom:link href="https://dullmode.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vue routerでTwitterシェアボタン</title>
+      <link>https://dullmode.github.io/posts/2021-04-30/</link>
+      <pubDate>Sat, 30 Apr 2022 20:02:38 +0900</pubDate>
+      
+      <guid>https://dullmode.github.io/posts/2021-04-30/</guid>
+      <description>素のHTMLファイルで書くシェアボタン &amp;lt;a target=&amp;#34;_blank&amp;#34; rel=&amp;#34;nofollow&amp;#34; role=&amp;#34;button&amp;#34; href=&amp;#34;https://twitter.com/intent/tweet?text=こんにちは！&amp;#34;&amp;gt; Twitterで共有 &amp;lt;/a&amp;gt; hrefの中にツイート用URLとツイート内容を入れる感じです。ちなみにこんにちは！の部分はパーセントエンコードでエスケープすることを強く推奨します。
+ただ、Vue routerを使っていると&amp;lt;a&amp;gt;タグはハードコーディングみたいで気持ち悪いのでVue routerで完結させるようにさせます。
+Vue routerでシェアボタン router/index.jsのroutesに以下のパスを追加します
+const routes = [ { path: &amp;#39;/share&amp;#39;, name: &amp;#39;Share&amp;#39;, beforeEnter() { const url = &amp;#39;https://twitter.com/intent/tweet?text=&amp;#39;; const text=`こんにちは！`; const encodedText = encodeURIComponent(text); //エスケープ処理  window.open(url + encodedText, &amp;#39;_blank&amp;#39;); } }, ] export default router ルートにwindow.open()かlocation.href=&#39;&#39;を使うことでページ移動出来ます。 移動先がツイート内容を付け加えたツイート用URLになる訳です。
+&amp;lt;router-link :to=&amp;quot;{name: &#39;Share&#39;}&amp;quot;&amp;gt; ツイートする &amp;lt;/router-link&amp;gt; vue routerを使ったシェアボタンの完成です。
+vue routerに変数を渡したい人向け const routes = [ { path: &amp;#39;/share&amp;#39;, name: &amp;#39;Share&amp;#39;, beforeEnter(to) { //変更点1  const url = &amp;#39;https://twitter.</description>
+    </item>
+    
     <item>
       <title>jinja2.exceptions.TemplateNotFoundの解決</title>
       <link>https://dullmode.github.io/posts/2022-04-15/</link>

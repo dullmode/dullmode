@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>twitter on dullmode</title>
+    <link>https://dullmode.github.io/tags/twitter/</link>
+    <description>Recent content in twitter on dullmode</description>
+    <image>
+      <url>https://imgur.com/a/SR2UQt7</url>
+      <link>https://imgur.com/a/SR2UQt7</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Sat, 30 Apr 2022 20:02:38 +0900</lastBuildDate><atom:link href="https://dullmode.github.io/tags/twitter/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vue routerでTwitterシェアボタン</title>
+      <link>https://dullmode.github.io/posts/2021-04-30/</link>
+      <pubDate>Sat, 30 Apr 2022 20:02:38 +0900</pubDate>
+      
+      <guid>https://dullmode.github.io/posts/2021-04-30/</guid>
+      <description>素のHTMLファイルで書くシェアボタン &amp;lt;a target=&amp;#34;_blank&amp;#34; rel=&amp;#34;nofollow&amp;#34; role=&amp;#34;button&amp;#34; href=&amp;#34;https://twitter.com/intent/tweet?text=こんにちは！&amp;#34;&amp;gt; Twitterで共有 &amp;lt;/a&amp;gt; hrefの中にツイート用URLとツイート内容を入れる感じです。ちなみにこんにちは！の部分はパーセントエンコードでエスケープすることを強く推奨します。
+ただ、Vue routerを使っていると&amp;lt;a&amp;gt;タグはハードコーディングみたいで気持ち悪いのでVue routerで完結させるようにさせます。
+Vue routerでシェアボタン router/index.jsのroutesに以下のパスを追加します
+const routes = [ { path: &amp;#39;/share&amp;#39;, name: &amp;#39;Share&amp;#39;, beforeEnter() { const url = &amp;#39;https://twitter.com/intent/tweet?text=&amp;#39;; const text=`こんにちは！`; const encodedText = encodeURIComponent(text); //エスケープ処理  window.open(url + encodedText, &amp;#39;_blank&amp;#39;); } }, ] export default router ルートにwindow.open()かlocation.href=&#39;&#39;を使うことでページ移動出来ます。 移動先がツイート内容を付け加えたツイート用URLになる訳です。
+&amp;lt;router-link :to=&amp;quot;{name: &#39;Share&#39;}&amp;quot;&amp;gt; ツイートする &amp;lt;/router-link&amp;gt; vue routerを使ったシェアボタンの完成です。
+vue routerに変数を渡したい人向け const routes = [ { path: &amp;#39;/share&amp;#39;, name: &amp;#39;Share&amp;#39;, beforeEnter(to) { //変更点1  const url = &amp;#39;https://twitter.</description>
+    </item>
+    
+  </channel>
+</rss>
