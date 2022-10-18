@@ -10,7 +10,18 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Fri, 15 Apr 2022 16:51:35 +0900</lastBuildDate><atom:link href="https://dullmode.github.io/tags/fastapi/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 18 Oct 2022 16:49:15 +0900</lastBuildDate><atom:link href="https://dullmode.github.io/tags/fastapi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>fastapiとstaticFile()でmethod not allowed</title>
+      <link>https://dullmode.github.io/posts/2022-10-18/</link>
+      <pubDate>Tue, 18 Oct 2022 16:49:15 +0900</pubDate>
+      
+      <guid>https://dullmode.github.io/posts/2022-10-18/</guid>
+      <description>エラー staticFileマウントしたらなんかPOSTできなかった
+import os from fastapi import FastAPI from fastapi.staticfiles import StaticFiles from pydantic import BaseModel class Chat(BaseModel): text: str app = FastAPI() this_directory = os.path.dirname(__file__) app.mount(&amp;#34;/&amp;#34;, StaticFiles(directory=os.path.join(this_directory, &amp;#34;static&amp;#34;), html=True), name=&amp;#34;static&amp;#34;) @app.post(&amp;#34;/chat/&amp;#34;) async def create_item(chat: Chat): return chat 127.0.0.1:46940 - &amp;#34;POST /chat/ HTTP/1.1&amp;#34; 405 Method Not Allowed 解決 app.mount()をルーターより後におけば大丈夫になった
+import os from fastapi import FastAPI from fastapi.staticfiles import StaticFiles from pydantic import BaseModel class Chat(BaseModel): text: str app = FastAPI() # この部分をmountより前に @app.</description>
+    </item>
+    
     <item>
       <title>jinja2.exceptions.TemplateNotFoundの解決</title>
       <link>https://dullmode.github.io/posts/2022-04-15/</link>

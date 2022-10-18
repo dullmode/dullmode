@@ -10,7 +10,18 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Fri, 22 Jul 2022 06:12:48 +0900</lastBuildDate><atom:link href="https://dullmode.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 18 Oct 2022 16:49:15 +0900</lastBuildDate><atom:link href="https://dullmode.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>fastapiとstaticFile()でmethod not allowed</title>
+      <link>https://dullmode.github.io/posts/2022-10-18/</link>
+      <pubDate>Tue, 18 Oct 2022 16:49:15 +0900</pubDate>
+      
+      <guid>https://dullmode.github.io/posts/2022-10-18/</guid>
+      <description>エラー staticFileマウントしたらなんかPOSTできなかった
+import os from fastapi import FastAPI from fastapi.staticfiles import StaticFiles from pydantic import BaseModel class Chat(BaseModel): text: str app = FastAPI() this_directory = os.path.dirname(__file__) app.mount(&amp;#34;/&amp;#34;, StaticFiles(directory=os.path.join(this_directory, &amp;#34;static&amp;#34;), html=True), name=&amp;#34;static&amp;#34;) @app.post(&amp;#34;/chat/&amp;#34;) async def create_item(chat: Chat): return chat 127.0.0.1:46940 - &amp;#34;POST /chat/ HTTP/1.1&amp;#34; 405 Method Not Allowed 解決 app.mount()をルーターより後におけば大丈夫になった
+import os from fastapi import FastAPI from fastapi.staticfiles import StaticFiles from pydantic import BaseModel class Chat(BaseModel): text: str app = FastAPI() # この部分をmountより前に @app.</description>
+    </item>
+    
     <item>
       <title>CPUの性能と職業別労働者数の関係を調べた</title>
       <link>https://dullmode.github.io/posts/2022-07-22/</link>
@@ -18,7 +29,7 @@
       
       <guid>https://dullmode.github.io/posts/2022-07-22/</guid>
       <description>下準備 processor.csvはその年の最高性能のものを抽出
-import pandas as pd import matplotlib.pyplot as plt import seaborn as sns import numpy as np import statsmodels.api as sm #CPU性能と職業別労働者数をデータフレームする p_df = pd.read_csv(&amp;#39;data/input/processor.csv&amp;#39;) p_df = p_df.groupby(&amp;#39;year&amp;#39;, group_keys=False).apply(lambda x: x.loc[x[&amp;#39;MOS transistor count&amp;#39;].idxmax()]) w_df = pd.read_csv(&amp;#39;data/input/worker2.csv&amp;#39;) #マージする p_df.reset_index(drop = True, inplace = True) w_df.reset_index(drop = True, inplace = True) df = pd.merge(w_df, p_df, on=&amp;#34;year&amp;#34;, how=&amp;#34;left&amp;#34;) #目的変数のリスト objective_vars = [&amp;#39;agriculture&amp;#39;, &amp;#39;fisheries&amp;#39;, &amp;#39;mining&amp;#39;, &amp;#39;construction&amp;#39;, &amp;#39;manifacture&amp;#39;, &amp;#39;infrastructure&amp;#39;, &amp;#39;infomation&amp;#39;, &amp;#39;transport&amp;#39;, &amp;#39;retail&amp;#39;, &amp;#39;finance&amp;#39;, &amp;#39;real-estate&amp;#39;, &amp;#39;research&amp;#39;, &amp;#39;accommodations-service&amp;#39;,&amp;#39;personal-service&amp;#39;, &amp;#39;education&amp;#39;, &amp;#39;medical&amp;#39;,&amp;#39;compound&amp;#39;,&amp;#39;etc&amp;#39;,&amp;#39;gov&amp;#39;] 複合グラフの作成 折れ線グラフが目的変数、棒グラフが説明変数</description>
+import pandas as pd import matplotlib.pyplot as plt import seaborn as sns import statsmodels.api as sm #CPU性能と職業別労働者数をデータフレームする p_df = pd.read_csv(&amp;#39;data/input/processor.csv&amp;#39;) p_df = p_df.groupby(&amp;#39;year&amp;#39;, group_keys=False).apply(lambda x: x.loc[x[&amp;#39;MOS transistor count&amp;#39;].idxmax()]) w_df = pd.read_csv(&amp;#39;data/input/worker2.csv&amp;#39;) #マージする p_df.reset_index(drop = True, inplace = True) w_df.reset_index(drop = True, inplace = True) df = pd.merge(w_df, p_df, on=&amp;#34;year&amp;#34;, how=&amp;#34;left&amp;#34;) #目的変数のリスト objective_vars = [&amp;#39;agriculture&amp;#39;, &amp;#39;fisheries&amp;#39;, &amp;#39;mining&amp;#39;, &amp;#39;construction&amp;#39;, &amp;#39;manifacture&amp;#39;, &amp;#39;infrastructure&amp;#39;, &amp;#39;infomation&amp;#39;, &amp;#39;transport&amp;#39;, &amp;#39;retail&amp;#39;, &amp;#39;finance&amp;#39;, &amp;#39;real-estate&amp;#39;, &amp;#39;research&amp;#39;, &amp;#39;accommodations-service&amp;#39;,&amp;#39;personal-service&amp;#39;, &amp;#39;education&amp;#39;, &amp;#39;medical&amp;#39;,&amp;#39;compound&amp;#39;,&amp;#39;etc&amp;#39;,&amp;#39;gov&amp;#39;] 複合グラフの作成 折れ線グラフが目的変数、棒グラフが説明変数</description>
     </item>
     
     <item>

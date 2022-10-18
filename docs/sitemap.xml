@@ -4,16 +4,41 @@
   
   <url>
     <loc>https://dullmode.github.io/categories/</loc>
-    <lastmod>2022-07-22T06:12:48+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://dullmode.github.io/posts/2022-07-22/</loc>
-    <lastmod>2022-07-22T06:12:48+09:00</lastmod>
+    <lastmod>2022-10-18T16:49:15+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://dullmode.github.io/</loc>
+    <lastmod>2022-10-18T16:49:15+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dullmode.github.io/tags/fastapi/</loc>
+    <lastmod>2022-10-18T16:49:15+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dullmode.github.io/posts/2022-10-18/</loc>
+    <lastmod>2022-10-18T16:49:15+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dullmode.github.io/posts/</loc>
+    <lastmod>2022-10-18T16:49:15+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dullmode.github.io/tags/</loc>
+    <lastmod>2022-10-18T16:49:15+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dullmode.github.io/categories/webapp/</loc>
+    <lastmod>2022-10-18T16:49:15+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dullmode.github.io/posts/2022-07-22/</loc>
     <lastmod>2022-07-22T06:12:48+09:00</lastmod>
   </url>
   
@@ -24,11 +49,6 @@
   
   <url>
     <loc>https://dullmode.github.io/tags/pandas/</loc>
-    <lastmod>2022-07-22T06:12:48+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://dullmode.github.io/posts/</loc>
     <lastmod>2022-07-22T06:12:48+09:00</lastmod>
   </url>
   
@@ -44,11 +64,6 @@
   
   <url>
     <loc>https://dullmode.github.io/tags/statsmodels/</loc>
-    <lastmod>2022-07-22T06:12:48+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://dullmode.github.io/tags/</loc>
     <lastmod>2022-07-22T06:12:48+09:00</lastmod>
   </url>
   
@@ -75,11 +90,6 @@
   <url>
     <loc>https://dullmode.github.io/categories/web-app/</loc>
     <lastmod>2022-04-30T20:02:38+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://dullmode.github.io/tags/fastapi/</loc>
-    <lastmod>2022-04-15T16:51:35+09:00</lastmod>
   </url>
   
   <url>
