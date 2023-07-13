@@ -5,6 +5,7 @@
     <link>https://dullmode.github.io/tags/uvicorn/</link>
     <description>Recent content in uvicorn on dullmode</description>
     <image>
+      <title>dullmode</title>
       <url>https://imgur.com/a/SR2UQt7</url>
       <link>https://imgur.com/a/SR2UQt7</link>
     </image>
@@ -19,6 +20,17 @@
       <guid>https://dullmode.github.io/posts/2022-03-22/</guid>
       <description>invalid HTTP request received 本番環境でfastapiを動かしている時に以下のエラーが出力されました。
 INFO: Started server process [9806] INFO: Waiting for application startup. INFO: Application startup complete. INFO: Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit) WARNING: Invalid HTTP request received. Traceback (most recent call last): File &amp;#34;/home/ec2-user/.local/lib/python3.7/site-packages/uvicorn/protocols/http/h11_impl.py&amp;#34;, line 170, in handle_events event = self.conn.next_event() File &amp;#34;/home/ec2-user/.local/lib/python3.7/site-packages/h11/_connection.py&amp;#34;, line 443, in next_event exc._reraise_as_remote_protocol_error() File &amp;#34;/home/ec2-user/.local/lib/python3.7/site-packages/h11/_util.py&amp;#34;, line 76, in _reraise_as_remote_protocol_error raise self File &amp;#34;/home/ec2-user/.local/lib/python3.7/site-packages/h11/_connection.py&amp;#34;, line 425, in next_event event = self.</description>
+    </item>
+    
+    <item>
+      <title>nvim treeでnerd fontが使えないとき！(chromebook使用)</title>
+      <link>https://dullmode.github.io/posts/2023-07-13/</link>
+      <pubDate>Tue, 22 Mar 2022 14:55:31 +0900</pubDate>
+      
+      <guid>https://dullmode.github.io/posts/2023-07-13/</guid>
+      <description>ChromeBook 未だにフォントを自由にいれない問題🤬 デフォルトモードではターミナル設定でフォントは指定しているものしか選べません。。 開発者モードだったらcroshから編集できるみたいですがデータが消えるので辞めました。
+環境💻 nvim-tree/nvim-web-devicons nvim-tree/nvim-tree.lua 応急処置1🚑 nerdfontを絵文字に変換してくれるプラグインが、、！ありがてぇ 応急処置2🚑 上記プラグインだけではフォルダやgitのアイコンまで修正してくれないので手動で。
+require(&amp;#34;nvim-tree&amp;#34;).setup({ renderer = { icons = { glyphs = { folder = { arrow_closed = &amp;#34;▶&amp;#34;, arrow_open = &amp;#34;▼&amp;#34;, default = &amp;#34;📁&amp;#34;, open = &amp;#34;📂&amp;#34;, empty = &amp;#34;🈳&amp;#34;, empty_open = &amp;#34;🈳&amp;#34;, symlink = &amp;#34;👣&amp;#34;, symlink_open = &amp;#34;👣&amp;#34;, }, git = { unstaged = &amp;#34;✗&amp;#34;, staged = &amp;#34;✓&amp;#34;, unmerged = &amp;#34;x&amp;#34;, renamed = &amp;#34;➜&amp;#34;, untracked = &amp;#34;★&amp;#34;, deleted = &amp;#34;x&amp;#34;, ignored = &amp;#34;x&amp;#34;, }, } } }, }) </description>
     </item>
     
   </channel>

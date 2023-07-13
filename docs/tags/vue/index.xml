@@ -5,6 +5,7 @@
     <link>https://dullmode.github.io/tags/vue/</link>
     <description>Recent content in vue on dullmode</description>
     <image>
+      <title>dullmode</title>
       <url>https://imgur.com/a/SR2UQt7</url>
       <link>https://imgur.com/a/SR2UQt7</link>
     </image>
@@ -20,9 +21,9 @@
       <description>素のHTMLファイルで書くシェアボタン &amp;lt;a target=&amp;#34;_blank&amp;#34; rel=&amp;#34;nofollow&amp;#34; role=&amp;#34;button&amp;#34; href=&amp;#34;https://twitter.com/intent/tweet?text=こんにちは！&amp;#34;&amp;gt; Twitterで共有 &amp;lt;/a&amp;gt; hrefの中にツイート用URLとツイート内容を入れる感じです。ちなみにこんにちは！の部分はパーセントエンコードでエスケープすることを強く推奨します。
 ただ、Vue routerを使っていると&amp;lt;a&amp;gt;タグはハードコーディングみたいで気持ち悪いのでVue routerで完結させるようにさせます。
 Vue routerでシェアボタン router/index.jsのroutesに以下のパスを追加します
-const routes = [ { path: &amp;#39;/share&amp;#39;, name: &amp;#39;Share&amp;#39;, beforeEnter() { const url = &amp;#39;https://twitter.com/intent/tweet?text=&amp;#39;; const text=`こんにちは！`; const encodedText = encodeURIComponent(text); //エスケープ処理  window.open(url + encodedText, &amp;#39;_blank&amp;#39;); } }, ] export default router ルートにwindow.open()かlocation.href=&#39;&#39;を使うことでページ移動出来ます。 移動先がツイート内容を付け加えたツイート用URLになる訳です。
-&amp;lt;router-link :to=&amp;quot;{name: &#39;Share&#39;}&amp;quot;&amp;gt; ツイートする &amp;lt;/router-link&amp;gt; vue routerを使ったシェアボタンの完成です。
-vue routerに変数を渡したい人向け const routes = [ { path: &amp;#39;/share&amp;#39;, name: &amp;#39;Share&amp;#39;, beforeEnter(to) { //変更点1  const url = &amp;#39;https://twitter.</description>
+const routes = [ { path: &amp;#39;/share&amp;#39;, name: &amp;#39;Share&amp;#39;, beforeEnter() { const url = &amp;#39;https://twitter.com/intent/tweet?text=&amp;#39;; const text=`こんにちは！`; const encodedText = encodeURIComponent(text); //エスケープ処理 window.open(url + encodedText, &amp;#39;_blank&amp;#39;); } }, ] export default router ルートにwindow.open()かlocation.href=&#39;&#39;を使うことでページ移動出来ます。 移動先がツイート内容を付け加えたツイート用URLになる訳です。
+&amp;lt;router-link :to=&amp;#34;{name: &amp;#39;Share&amp;#39;}&amp;#34;&amp;gt; ツイートする &amp;lt;/router-link&amp;gt; vue routerを使ったシェアボタンの完成です。
+vue routerに変数を渡したい人向け const routes = [ { path: &amp;#39;/share&amp;#39;, name: &amp;#39;Share&amp;#39;, beforeEnter(to) { //変更点1 const url = &amp;#39;https://twitter.</description>
     </item>
     
     <item>
@@ -35,9 +36,9 @@ vue routerに変数を渡したい人向け const routes = [ { path: &amp;#39;/s
 しかしながらTwitterのクローラーはjavascriptを実行しない為、Vueを用いたSPAではindex.htmlに設定されたOGP画像のみ返す事ができます。つまりurl毎にOGP画像を変えたり、文章や画像を生成することはVue単体では不可能です。
 1. Server Side Rendering サーバーサイドレンダリング(SSR)はその名の通りサーバー側でアプリケーションの HTMLを生成し、レスポンスとして返すことを言います。SPAは表示したいものがあれば、都度APIから取得してくるのに対してSSRは初回のみAPI通信が不要なHTMLを返すのです。初月のみ無料、初月以降月額料金になるサブスクみたいな感じですかね。
 URLによってJavascriptを使わずにHTMLファイルを変えられるので、動的にOGPも編集できます
- Pros: ページの読み込み高速化、SEOにも良い Cons: SPAを作り直す必要がある、技術取得コストが高い  要件定義の段階のプロジェクトにはSSRは有力な候補になります。既存のSPAアプリをSSRに変更するにはとても時間がかかりそうです。
+Pros: ページの読み込み高速化、SEOにも良い Cons: SPAを作り直す必要がある、技術取得コストが高い 要件定義の段階のプロジェクトにはSSRは有力な候補になります。既存のSPAアプリをSSRに変更するにはとても時間がかかりそうです。
 2. Dynamic Rendering ダイナミック レンダリングとは、特定のユーザーエージェントを対象に、クライアント側でレンダリングされるコンテンツとプリレンダリングされるコンテンツを切り替えることを指します。人によって態度を変える上司みたいな感じだと考えれば想像に難くないですね。Twitter Botなど特定のクライアントの時のみOGP画像が設定されたHTMLファイルを返すことでURLごとに違うOGPを返す事ができます。
- Pros: 導入がSSRより簡単、SEOにも良い Cons: 画像や文章の生成が動的にできない  3. バックエンド側がOGPを返す フロントエンドURLへのリダイレクトとOGPがセットされたHTMLファイルを返すエンドポイントをバックエンドで実装します。Twitter クローラーはjavascriptを実行しないのでOGPのみ表示するのに対し、エンドポイントにアクセスしたユーザーはフロントエンドにリダイレクトされます。
+Pros: 導入がSSRより簡単、SEOにも良い Cons: 画像や文章の生成が動的にできない 3. バックエンド側がOGPを返す フロントエンドURLへのリダイレクトとOGPがセットされたHTMLファイルを返すエンドポイントをバックエンドで実装します。Twitter クローラーはjavascriptを実行しないのでOGPのみ表示するのに対し、エンドポイントにアクセスしたユーザーはフロントエンドにリダイレクトされます。
 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;ja&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;utf-8&amp;#34;&amp;gt; &amp;lt;meta property=&amp;#34;og:title&amp;#34; content=&amp;#34;タイトル&amp;#34;&amp;gt; &amp;lt;meta property=&amp;#34;og:image&amp;#34; content=&amp;#34;画像&amp;#34;&amp;gt; &amp;lt;meta property=&amp;#34;og:description&amp;#34; content=&amp;#34;サイトの説明&amp;#34;&amp;gt; &amp;lt;meta property=&amp;#34;og:url&amp;#34; content=&amp;#34;サイトのURL&amp;#34;&amp;gt; &amp;lt;meta property=&amp;#34;og:type&amp;#34; content=&amp;#34;website&amp;#34;&amp;gt; &amp;lt;meta property=&amp;#34;og:site_name&amp;#34; content=&amp;#34;サイトの名前&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;twitter:site&amp;#34; content=&amp;#34;@tos&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;twitter:card&amp;#34; content=&amp;#34;summary&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;twitter:title&amp;#34; content=&amp;#34;タイトル&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;twitter:image&amp;#34; content=&amp;#34;画像&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;twitter:description&amp;#34; content=&amp;#34;説明&amp;#34;&amp;gt; &amp;lt;script&amp;gt; window.</description>
     </item>
     

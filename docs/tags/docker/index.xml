@@ -5,6 +5,7 @@
     <link>https://dullmode.github.io/tags/docker/</link>
     <description>Recent content in docker on dullmode</description>
     <image>
+      <title>dullmode</title>
       <url>https://imgur.com/a/SR2UQt7</url>
       <link>https://imgur.com/a/SR2UQt7</link>
     </image>
@@ -22,7 +23,7 @@
 eval $(ssh-agent -s) &amp;amp;&amp;amp; ssh-add 人によってはeval $(ssh-agent -s)が無くても大丈夫かも。僕はssh-addだけだとエラー出ました。
 broken pipe error / 255 version mismatch error ssh先に、docker-compose -c [リモートサーバーのcontext] upと入力したら出現しました。
 解決策はCOMPOSE_DOCKER_CLI_BUILD=0をコマンドの先頭に入力することみたいです。 先程の例では、このように入力することが正解だったみたいです。
-COMPOSE_DOCKER_CLI_BUILD=0 docker-compose -c [リモートサーバーのcontext] up 参考  docker-connect-to-remote-daemon-via-ssh-permission-denied-publickey | stackoverflow docker-compose #8218 | github  </description>
+COMPOSE_DOCKER_CLI_BUILD=0 docker-compose -c [リモートサーバーのcontext] up 参考 docker-connect-to-remote-daemon-via-ssh-permission-denied-publickey | stackoverflow docker-compose #8218 | github </description>
     </item>
     
   </channel>
