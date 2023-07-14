@@ -53,9 +53,9 @@ params:
   label:
     text: " "
 
-  # profile-mode
-  profileMode:
-    enabled: true # needs to be explicitly set
+      # profile-mode
+    profileMode:
+      enabled: true # needs to be explicitly set
     title: dulmode
     subtitle: "note to self, or yourself"
     imageUrl: "/img/ms-icon-310x310.png"
@@ -70,21 +70,21 @@ params:
       - name: Tags
         url: tags
 
-  # home-info mode
-  homeInfoParams:
-    Title: "Hi there \U0001F44B"
-    Content: Welcome to my blog
+          # home-info mode
+        homeInfoParams:
+          Title: "Hi there \U0001F44B"
+        Content: Welcome to my blog
 
-  socialIcons:
-    - name: twitter
-      url: "https://twitter.com/dullmode"
-    - name: stackoverflow
-      url: "https://stackoverflow.com/users/14800276/dullmode" 
-    - name: github
-      url: "https://dullmode.github.io"
-  analytics:
-    google:
-      SiteVerificationTag: "XYZabc"
+        socialIcons:
+          - name: twitter
+        url: "https://twitter.com/dullmode"
+      - name: stackoverflow
+        url: "https://stackoverflow.com/users/14800276/dullmode" 
+      - name: github
+        url: "https://dullmode.github.io"
+        analytics:
+          google:
+            SiteVerificationTag: "qjmQlp22DyEvx_WnxcJ1EXvxoTngVSNPGtcjmuHR3fU"
     bing:
       SiteVerificationTag: "XYZabc"
     yandex:
