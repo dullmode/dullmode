@@ -13,14 +13,15 @@
     <language>ja-jp</language>
     <lastBuildDate>Thu, 13 Jul 2023 14:55:31 +0900</lastBuildDate><atom:link href="https://dullmode.github.io/tags/nvim/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>nvim treeでnerd fontが使えないとき！(chromebook使用)</title>
+      <title>nvim-web-deviconsでnerd fontが使えないとき！</title>
       <link>https://dullmode.github.io/posts/2023-07-13/</link>
       <pubDate>Thu, 13 Jul 2023 14:55:31 +0900</pubDate>
       
       <guid>https://dullmode.github.io/posts/2023-07-13/</guid>
-      <description>ChromeBook 未だにフォントを自由にいれない問題🤬 デフォルトモードではターミナル設定でフォントは指定しているものしか選べません。。 開発者モードだったらcroshから編集できるみたいですがデータが消えるので辞めました。
-🔻みてよこれ。やるきでない 環境💻 nvim-tree/nvim-web-devicons nvim-tree/nvim-tree.lua 応急処置1🚑 nerdfontを絵文字に変換してくれるプラグインが、、！ありがてぇ 応急処置2🚑 上記プラグインだけではフォルダやgitのアイコンまで修正してくれないので手動で。
-require(&amp;#34;nvim-tree&amp;#34;).setup({ renderer = { icons = { glyphs = { folder = { arrow_closed = &amp;#34;▶&amp;#34;, arrow_open = &amp;#34;▼&amp;#34;, default = &amp;#34;📁&amp;#34;, open = &amp;#34;📂&amp;#34;, empty = &amp;#34;🈳&amp;#34;, empty_open = &amp;#34;🈳&amp;#34;, symlink = &amp;#34;👣&amp;#34;, symlink_open = &amp;#34;👣&amp;#34;, }, git = { unstaged = &amp;#34;✗&amp;#34;, staged = &amp;#34;✓&amp;#34;, unmerged = &amp;#34;x&amp;#34;, renamed = &amp;#34;➜&amp;#34;, untracked = &amp;#34;★&amp;#34;, deleted = &amp;#34;x&amp;#34;, ignored = &amp;#34;x&amp;#34;, }, } } }, }) やったぜ。.</description>
+      <description>ChromeBook 自由にフォント入らない&amp;hellip; デフォルトモードではターミナル設定でフォントは指定しているものしか選べません。 開発者モードだったらcroshから編集できるみたいですがデータが消えるので辞めました。
+🔻こんな感じ 環境💻 nvim-tree/nvim-web-devicons nvim-tree/nvim-tree.lua 応急処置1🚑 nerdfontを絵文字に変換してくれるプラグインが、、！ありがてぇ packerでインストール
+use(&amp;#39;adelarsq/vim-devicons-emoji&amp;#39;) 応急処置2🚑 上記プラグインだけではフォルダやgitのアイコンまで修正してくれないので手動で。
+require(&amp;#39;nvim-tree&amp;#39;).setup({ on_attach = my_on_attach, renderer = { icons = { glyphs = { default = &amp;#34;📄&amp;#34;, symlink = &amp;#34;📫&amp;#34;, bookmark = &amp;#34;⭐&amp;#34;, modified = &amp;#34;🔸&amp;#34;, folder = { arrow_closed = &amp;#34;⏵&amp;#34;, arrow_open = &amp;#34;⏷&amp;#34;, default = &amp;#34;📁&amp;#34;, open = &amp;#34;📂&amp;#34;, empty = &amp;#34;📪&amp;#34;, empty_open = &amp;#34;📭&amp;#34;, symlink = &amp;#34;📫&amp;#34;, symlink_open = &amp;#34;📬&amp;#34;, }, git = { unstaged = &amp;#34;✴️ &amp;#34;, staged = &amp;#34;✅&amp;#34;, unmerged = &amp;#34;⏪&amp;#34;, renamed = &amp;#34;🔄&amp;#34;, untracked = &amp;#34;🆕&amp;#34;, deleted = &amp;#34;⛔️&amp;#34;, ignored = &amp;#34;ℹ️ &amp;#34;, }, } } }, }) やったぜ。 </description>
     </item>
     
   </channel>
