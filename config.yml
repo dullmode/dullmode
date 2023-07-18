@@ -41,21 +41,8 @@ params:
   showtoc: false
   tocopen: false
 
-  assets:
-    # disableHLJS: true # to disable highlight.js
-    # disableFingerprinting: true
-    favicon: "/img/favicon.ico"
-    favicon16x16: "/img/favicon-16x16.png"
-    favicon32x32: "/img/favicon-32x32.png"
-    apple_touch_icon: "/img/ms-icon-310x310.png"
-    safari_pinned_tab: "/img/ms-icon-310x310.png"
-
-  label:
-    text: " "
-
-      # profile-mode
-    profileMode:
-      enabled: true # needs to be explicitly set
+  profileMode:
+    enabled: true # needs to be explicitly set
     title: dulmode
     subtitle: "note to self, or yourself"
     imageUrl: "/img/ms-icon-310x310.png"
@@ -75,20 +62,30 @@ params:
           Title: "Hi there \U0001F44B"
         Content: Welcome to my blog
 
-        socialIcons:
-          - name: twitter
-        url: "https://twitter.com/dullmode"
-      - name: stackoverflow
-        url: "https://stackoverflow.com/users/14800276/dullmode" 
-      - name: github
-        url: "https://dullmode.github.io"
-        analytics:
-          google:
-            SiteVerificationTag: "qjmQlp22DyEvx_WnxcJ1EXvxoTngVSNPGtcjmuHR3fU"
-    bing:
-      SiteVerificationTag: "XYZabc"
-    yandex:
-      SiteVerificationTag: "XYZabc"
+  socialIcons:
+    - name: twitter
+      url: "https://twitter.com/dullmode"
+    - name: stackoverflow
+      url: "https://stackoverflow.com/users/14800276/dullmode" 
+    - name: github
+      url: "https://dullmode.github.io"
+
+  assets:
+    # disableHLJS: true # to disable highlight.js
+    # disableFingerprinting: true
+    favicon: "/img/favicon.ico"
+    favicon16x16: "/img/favicon-16x16.png"
+    favicon32x32: "/img/favicon-32x32.png"
+    apple_touch_icon: "/img/ms-icon-310x310.png"
+    safari_pinned_tab: "/img/ms-icon-310x310.png"
+
+  label:
+    text: " "
+
+  # profile-mode
+  analytics:
+    google:
+      SiteVerificationTag: "qjmQlp22DyEvx_WnxcJ1EXvxoTngVSNPGtcjmuHR3fU"
 
   cover:
     hidden: true # hide everywhere but not in structured data

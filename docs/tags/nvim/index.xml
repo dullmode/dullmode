@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>linux on dullmode</title>
-    <link>https://dullmode.github.io/tags/linux/</link>
-    <description>Recent content in linux on dullmode</description>
+    <title>nvim on dullmode</title>
+    <link>https://dullmode.github.io/tags/nvim/</link>
+    <description>Recent content in nvim on dullmode</description>
     <image>
       <title>dullmode</title>
       <url>https://imgur.com/a/SR2UQt7</url>
@@ -11,7 +11,7 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Thu, 13 Jul 2023 14:55:31 +0900</lastBuildDate><atom:link href="https://dullmode.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 13 Jul 2023 14:55:31 +0900</lastBuildDate><atom:link href="https://dullmode.github.io/tags/nvim/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>nvim treeでnerd fontが使えないとき！(chromebook使用)</title>
       <link>https://dullmode.github.io/posts/2023-07-13/</link>
@@ -21,20 +21,6 @@
       <description>ChromeBook 未だにフォントを自由にいれない問題🤬 デフォルトモードではターミナル設定でフォントは指定しているものしか選べません。。 開発者モードだったらcroshから編集できるみたいですがデータが消えるので辞めました。
 🔻みてよこれ。やるきでない 環境💻 nvim-tree/nvim-web-devicons nvim-tree/nvim-tree.lua 応急処置1🚑 nerdfontを絵文字に変換してくれるプラグインが、、！ありがてぇ 応急処置2🚑 上記プラグインだけではフォルダやgitのアイコンまで修正してくれないので手動で。
 require(&amp;#34;nvim-tree&amp;#34;).setup({ renderer = { icons = { glyphs = { folder = { arrow_closed = &amp;#34;▶&amp;#34;, arrow_open = &amp;#34;▼&amp;#34;, default = &amp;#34;📁&amp;#34;, open = &amp;#34;📂&amp;#34;, empty = &amp;#34;🈳&amp;#34;, empty_open = &amp;#34;🈳&amp;#34;, symlink = &amp;#34;👣&amp;#34;, symlink_open = &amp;#34;👣&amp;#34;, }, git = { unstaged = &amp;#34;✗&amp;#34;, staged = &amp;#34;✓&amp;#34;, unmerged = &amp;#34;x&amp;#34;, renamed = &amp;#34;➜&amp;#34;, untracked = &amp;#34;★&amp;#34;, deleted = &amp;#34;x&amp;#34;, ignored = &amp;#34;x&amp;#34;, }, } } }, }) やったぜ。.</description>
-    </item>
-    
-    <item>
-      <title>リモートサーバー内でのdocker-composeエラー</title>
-      <link>https://dullmode.github.io/posts/2022-03-21/</link>
-      <pubDate>Mon, 21 Mar 2022 17:50:38 +0900</pubDate>
-      
-      <guid>https://dullmode.github.io/posts/2022-03-21/</guid>
-      <description>最近はdocker-composeの使い過ぎでdockerのコマンドを忘れてきました。今回はこちらの記事を参考にdocker-composeでリモートサーバーにデプロイしようとした時に発生したエラーの備忘録です。
-永遠にpassphrase/password を求められる docker -c [context_name] [command]を使用したときに出現しました。以下のコマンドを打つとエラーが消えます。
-eval $(ssh-agent -s) &amp;amp;&amp;amp; ssh-add 人によってはeval $(ssh-agent -s)が無くても大丈夫かも。僕はssh-addだけだとエラー出ました。
-broken pipe error / 255 version mismatch error ssh先に、docker-compose -c [リモートサーバーのcontext] upと入力したら出現しました。
-解決策はCOMPOSE_DOCKER_CLI_BUILD=0をコマンドの先頭に入力することみたいです。 先程の例では、このように入力することが正解だったみたいです。
-COMPOSE_DOCKER_CLI_BUILD=0 docker-compose -c [リモートサーバーのcontext] up 参考 docker-connect-to-remote-daemon-via-ssh-permission-denied-publickey | stackoverflow docker-compose #8218 | github </description>
     </item>
     
   </channel>
